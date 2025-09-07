@@ -1,24 +1,33 @@
 <!doctype html>
-
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dapatkan Bantuan</title>  <!-- Open Graph / Twitter Card: gunakan IMAGE_URL dan DIRECT_LINK -->  <meta property="og:title" content="" />
+  <title>Dapatkan Bantuan</title>  
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="" />
   <meta property="og:description" content="" />
   <meta property="og:image" content="img.jpeg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="DIRECT_LINK" />  <!-- Twitter/X card: gunakan large image preview -->  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a" />
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="" />
   <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="IMAGE_URL" />  <!-- Minimal styling so page looks clean if user opens it briefly -->  <style>
+  <meta name="twitter:image" content="img.jpeg" />
+
+  <!-- Minimal styling -->
+  <style>
     html,body{height:100%;margin:0;background:#111;color:#fff;font-family:Inter, system-ui, Arial, sans-serif}
     .wrap{height:100%;display:flex;align-items:center;justify-content:center;padding:20px}
     .card{max-width:760px;width:100%;border-radius:12px;overflow:hidden;background:#000;text-align:center}
     .card img{width:100%;height:auto;display:block}
     .cta{padding:18px;background:linear-gradient(90deg,#1a73e8,#1558c7);font-weight:700;color:#fff;text-decoration:none;display:inline-block;border-radius:10px;margin:18px}
     .note{font-size:13px;color:#ddd;margin-bottom:8px}
-  </style></head>
+  </style>
+</head>
 <body>
   <!-- Entire page links to DIRECT_LINK as fallback for non-JS users -->
   <a id="fullLink" href="https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a" rel="noopener noreferrer" style="display:block;text-decoration:none;color:inherit">
@@ -32,7 +41,9 @@
         </div>
       </div>
     </div>
-  </a>  <script>
+  </a>  
+
+  <script>
     (function(){
       // GANTI nilai default di sini jika tidak menggunakan query param
       const DEFAULT_TARGET = 'https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a';
@@ -50,11 +61,11 @@
         a.href = link;
       }
 
-      // Redirect singkat supaya OG tetap terbaca oleh scraper (JS redirect -> scraper tetap membaca OG tags dari HTML)
-      // gunakan delay 500ms supaya pengalaman klik terasa langsung
+      // Redirect singkat supaya OG tetap terbaca oleh scraper
       setTimeout(()=>{
         try{ window.location.replace(link); }catch(e){ window.location.href = link; }
-      }, 500);
+      }, 1000);
     })();
-  </script></body>
+  </script>
+</body>
 </html>
