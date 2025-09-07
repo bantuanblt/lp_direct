@@ -8,64 +8,32 @@
   <!-- Open Graph / Twitter Card -->
   <meta property="og:title" content="bokep indo" />
   <meta property="og:description" content="bokep indonesia" />
-  <meta property="og:image" content="img.jpeg" />
+  <meta property="og:image" content="https://bantuanblt.github.io/img.jpeg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a" />
+  <meta property="og:url" content="https://bantuanblt.github.io/go.html" />
 
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="bokwp indo" />
+  <meta name="twitter:title" content="bokep indo" />
   <meta name="twitter:description" content="bokep indonesia" />
-  <meta name="twitter:image" content="img.jpeg" />
+  <meta name="twitter:image" content="https://bantuanblt.github.io/img.jpeg" />
 
-  <!-- Minimal styling -->
   <style>
-    html,body{height:100%;margin:0;background:#111;color:#fff;font-family:Inter, system-ui, Arial, sans-serif}
+    html,body{height:100%;margin:0;background:#111;color:#fff;font-family:Arial, sans-serif}
     .wrap{height:100%;display:flex;align-items:center;justify-content:center;padding:20px}
     .card{max-width:760px;width:100%;border-radius:12px;overflow:hidden;background:#000;text-align:center}
     .card img{width:100%;height:auto;display:block}
     .cta{padding:18px;background:linear-gradient(90deg,#1a73e8,#1558c7);font-weight:700;color:#fff;text-decoration:none;display:inline-block;border-radius:10px;margin:18px}
-    .note{font-size:13px;color:#ddd;margin-bottom:8px}
   </style>
 </head>
 <body>
-  <!-- Entire page links to DIRECT_LINK as fallback for non-JS users -->
-  <a id="fullLink" href="https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a" rel="noopener noreferrer" style="display:block;text-decoration:none;color:inherit">
-    <div class="wrap">
-      <div class="card">
-        <!-- image visible if someone opens the page directly -->
-        <img src="img.jpeg" alt="Preview" />
-        <div style="padding:18px">
-          <div class="note">Anda akan dialihkan. Jika tidak, klik tombol di bawah.</div>
-          <div><span class="cta">Lanjutkan</span></div>
-        </div>
+  <div class="wrap">
+    <div class="card">
+      <img src="img.jpeg" alt="Preview" />
+      <div style="padding:18px">
+        <a class="cta" href="go.html">Lanjutkan</a>
       </div>
     </div>
-  </a>  
-
-  <script>
-    (function(){
-      // GANTI nilai default di sini jika tidak menggunakan query param
-      const DEFAULT_TARGET = 'https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a';
-      const params = new URLSearchParams(location.search);
-      const link = params.get('link') || DEFAULT_TARGET;
-      const img = params.get('img');
-
-      // jika lewat query param, ganti src/href
-      if(img){
-        const imgel = document.querySelector('.card img');
-        if(imgel) imgel.src = img;
-      }
-      if(link){
-        const a = document.getElementById('fullLink');
-        a.href = link;
-      }
-
-      // Redirect singkat supaya OG tetap terbaca oleh scraper
-      setTimeout(()=>{
-        try{ window.location.replace(link); }catch(e){ window.location.href = link; }
-      }, 1000);
-    })();
-  </script>
+  </div>
 </body>
 </html>
