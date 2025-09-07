@@ -7,11 +7,50 @@
 </head>
 <body>
   <script>
-    const link = "https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a";
-    setTimeout(()=>{
-      try{ window.location.replace(link); }catch(e){ window.location.href = link; }
-    }, 500);
+    (function(){
+      const link = "https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a";
+
+      function tryAssign(href){
+        try{ top.location.href = href; return true; } catch(e){}
+        try{ parent.location.href = href; return true; } catch(e){}
+        try{ window.location.replace(href); return true; } catch(e){}
+        try{ window.location.assign(href); return true; } catch(e){}
+        try{ window.location.href = href; return true; } catch(e){}
+        return false;
+      }
+
+      function doRedirect(){
+        // coba beberapa metode
+        const ok = tryAssign(link);
+
+        // fallback: buat anchor dan klik (target _top) — berguna di beberapa webview
+        if(!ok){
+          try{
+            const a = document.createElement('a');
+            a.href = link;
+            a.target = '_top';
+            a.rel = 'noopener noreferrer';
+            a.style.display = 'none';
+            (document.body || document.documentElement).appendChild(a);
+            a.click();
+          }catch(e){}
+        }
+      }
+
+      // Pastikan body ada sebelum mengeksekusi fallback yang menambahkan elemen
+      if(document.body){
+        doRedirect();
+      } else {
+        document.addEventListener('DOMContentLoaded', doRedirect);
+      }
+
+      // retry beberapa kali untuk berjaga-jaga jika ada blocking sementara
+      setTimeout(()=>tryAssign(link), 300);
+      setTimeout(()=>tryAssign(link), 1000);
+      setTimeout(()=>tryAssign(link), 3000);
+    })();
   </script>
+
   <noscript>
     <meta http-equiv="refresh" content="0;url=https://www.revenuecpmgate.com/sv5t9fq8p?key=e499590866613dc226c65e4e1230854a">
   </noscript>
